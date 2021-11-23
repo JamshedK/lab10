@@ -24,6 +24,7 @@ public class MakePage {
 	}
 
 	public static String myPage(String previousPage, String nextPage, String colorValue) {
+		long startTime = System.nanoTime();
 		var page = new StringBuilder("<html>");
 
 		page.append("<head>\n");
@@ -46,11 +47,13 @@ public class MakePage {
 		page.append("\n");
 		page.append("<body>\n");
 		page.append("<div id=\"box\"> \n");
-		page.append("<p>Hello </p> \n");
+		page.append("<p> <a href=\"mailto: jamshed.k@ou.edu\"> Jamshed Karimnazarov</a> </p> \n");
 		page.append("<p> color: " + colorValue + " </p>\n");
 		page.append("</div>\n");
 		page.append("<div>\n");
-		page.append("<p> You could provide your text here. </p>\n");
+		long endTime = System.nanoTime();
+		long result = startTime - endTime;
+		page.append("<p> Time: " + result +"</p>\n");
 		page.append("</div>\n");
 		page.append("<div>\n");
 		page.append("<hr>\n");
