@@ -52,7 +52,7 @@ public class MakePage {
 		page.append("</div>\n");
 		page.append("<div>\n");
 		long endTime = System.nanoTime();
-		long result = startTime - endTime;
+		long result = endTime - startTime;
 		page.append("<p> Time: " + result +"</p>\n");
 		page.append("</div>\n");
 		page.append("<div>\n");
